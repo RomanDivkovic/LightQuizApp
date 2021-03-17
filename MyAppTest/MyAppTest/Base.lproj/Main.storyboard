@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="grU-Si-khr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Quiz View Controller-->
+        <scene sceneID="bK2-Cu-ekn">
+            <objects>
+                <viewController id="grU-Si-khr" customClass="QuizViewController" customModule="MyAppTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tde-0w-lRN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7RI-Tl-PWq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7RI-Tl-PWq" secondAttribute="height" multiplier="1:1" id="DPe-Ux-L4a"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5f-pu-61f">
+                                <rect key="frame" x="30" y="792" width="354" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="U3n-ia-DVq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Nej">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="falseButton:" destination="grU-Si-khr" eventType="touchUpInside" id="dKf-PN-gPp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSc-en-2F7">
+                                <rect key="frame" x="30" y="722" width="354" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="s7P-ft-U0s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Ja">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="trueButton:" destination="grU-Si-khr" eventType="touchUpInside" id="5GM-5l-Kcv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaI-FJ-c2r">
+                                <rect key="frame" x="10" y="488" width="394" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hlR-cb-8KH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hlR-cb-8KH" firstAttribute="trailing" secondItem="HSc-en-2F7" secondAttribute="trailing" constant="30" id="0B9-J5-Eh7"/>
+                            <constraint firstItem="HSc-en-2F7" firstAttribute="leading" secondItem="hlR-cb-8KH" secondAttribute="leading" constant="30" id="Cit-gs-fIH"/>
+                            <constraint firstItem="hlR-cb-8KH" firstAttribute="bottom" secondItem="a5f-pu-61f" secondAttribute="bottom" constant="25" id="DRp-D6-WUx"/>
+                            <constraint firstItem="hlR-cb-8KH" firstAttribute="trailing" secondItem="VaI-FJ-c2r" secondAttribute="trailing" constant="10" id="JLt-5r-y3a"/>
+                            <constraint firstItem="VaI-FJ-c2r" firstAttribute="top" secondItem="7RI-Tl-PWq" secondAttribute="bottom" constant="30" id="L26-No-c12"/>
+                            <constraint firstItem="a5f-pu-61f" firstAttribute="leading" secondItem="hlR-cb-8KH" secondAttribute="leading" constant="30" id="V4R-nO-UTx"/>
+                            <constraint firstItem="VaI-FJ-c2r" firstAttribute="leading" secondItem="hlR-cb-8KH" secondAttribute="leading" constant="10" id="VEc-tb-cZa"/>
+                            <constraint firstItem="7RI-Tl-PWq" firstAttribute="trailing" secondItem="hlR-cb-8KH" secondAttribute="trailing" id="fOt-cL-ObX"/>
+                            <constraint firstItem="7RI-Tl-PWq" firstAttribute="top" secondItem="hlR-cb-8KH" secondAttribute="top" id="hDo-uh-sqI"/>
+                            <constraint firstItem="hlR-cb-8KH" firstAttribute="trailing" secondItem="a5f-pu-61f" secondAttribute="trailing" constant="30" id="mAX-P7-xBZ"/>
+                            <constraint firstItem="a5f-pu-61f" firstAttribute="top" secondItem="HSc-en-2F7" secondAttribute="bottom" constant="25" id="tGR-p5-kEl"/>
+                            <constraint firstItem="7RI-Tl-PWq" firstAttribute="leading" secondItem="hlR-cb-8KH" secondAttribute="leading" id="vUz-XF-n2J"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="quizImage" destination="7RI-Tl-PWq" id="kTq-f8-zmH"/>
+                        <outlet property="quizLabel" destination="VaI-FJ-c2r" id="dRJ-kc-fCE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1SH-lt-60v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-352.17391304347831" y="-2.0089285714285712"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
